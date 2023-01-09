@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.AddJobActivity">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Add Job"
+
+            android:background="@color/purple"
+            app:titleTextColor="@color/white"
+            android:id="@+id/toolbar"
+            app:navigationIcon="@drawable/back_btn"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job Details"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@color/red"
+                android:textStyle="bold"
+                android:fontFamily="@font/opensans"
+                android:textAllCaps="true"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/JobId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job id : "
+                android:textColor="@color/red"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/opensans"
+                android:textAllCaps="true"/>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="CustomerName"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get CustomerName"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:backgroundTint="@color/gray"
+                    android:hint="Get CustomerName"
+                    android:textColorHint="@color/white"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/C_CustomerName"/>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ShopName"
+                    android:inputType="text"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/ShopName"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Area"
+                    android:inputType="text"
+
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/Area"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Problem"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/ProblemSpin"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/gray"
+                    android:id="@+id/AddProblem"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Model"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/ModelSpin"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/gray"
+                    android:id="@+id/AddModel"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/TypeSpin"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/gray"
+                    android:id="@+id/AddType"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Brand"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/BrandSpin"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/gray"
+                    android:id="@+id/AddBrand"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CustomerData"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ShopName_Area"
+                android:textSize="16dp"
+                android:fontFamily="@font/libre"/>
+
+
+            <LinearLayout
+                android:id="@+id/mainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status Details"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@color/red"
+                android:textStyle="bold"
+                android:fontFamily="@font/opensans"
+                android:textAllCaps="true"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.5">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Status details"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/JobStatus"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/gray"
+                    android:id="@+id/AddJobStatus"/>
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ClosingBy"
+                    android:inputType="text"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/ClosingBy"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Closing Amount"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/ClosingAmount"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="175dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="JobCreateDate"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dd-mm-yyyy"
+                    android:layout_weight="1.5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/JobCreateDate"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:text="JobCloseDate"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="19dp"
+                    android:layout_gravity="center"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dd-mm-yyyy"
+                    android:layout_weight="1.5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/JobCloseDate"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:text="DeliveryDate"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dd-mm-yyyy"
+                    android:layout_weight="1.5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/JobDeliveryDate"/>
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Testing By"
+                    android:inputType="text"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/TestingBy"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Testing Amount"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/TestingAmount"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amount Details"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/red"
+                android:textStyle="bold"
+                android:fontFamily="@font/opensans"
+                android:textAllCaps="true"
+                android:layout_gravity="center"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Old Balance"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/OldBalance"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bill Amount"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/BillAmount"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Received Amount"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/ReceivedAmount"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Balance Amount"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/BalanceAmount"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Net Balance"
+                    android:inputType="number"
+                    android:text="0"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/NetBalance"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Received Date"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dd-mm-yyyy"
+                    android:layout_weight="1.5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/ReceivedDate"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cash Mode"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/CashMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/customers1"
+                app:startIconTint="@color/purple"
+                app:boxStrokeColor="@color/purple"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="JobCreateBy"
+                    android:inputType="text"
+                    android:fontFamily="@font/librebaskerville_bold"
+                    android:id="@+id/JobCreateBy"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="JobAssignBy"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"/>
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/JobAssignBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/MC_CustomerImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="5dp"
+                app:cardElevation="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/labels_icon"
+                        android:layout_gravity="center"
+                        android:id="@+id/Job_Image"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/JobImageText"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/librebaskerville_bold"
+                        android:text="Set Job Image"/>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textColor="@color/white"
+                app:cornerRadius="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/Save"
+                android:backgroundTint="@color/red"
+                android:layout_marginBottom="200dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

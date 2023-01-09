@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation1"
+    app:startDestination="@id/Tasks">
+
+
+    <fragment android:id="@+id/Tasks"
+        android:name="com.example.fastleader.Fragment.JobFragment"
+        android:label="Job"
+        tools:layout="@layout/fragment_job"/>
+    <fragment android:id="@+id/Customers"
+        android:name="com.example.fastleader.Fragment.CustomerFragment"
+        android:label="Customer"
+        tools:layout="@layout/fragment_customer"/>
+    <fragment android:id="@+id/MyTask"
+        android:name="com.example.fastleader.Fragment.MyTaskFragment"
+        android:label="MyTask"
+        tools:layout="@layout/fragment_leads"/>
+
+
+<!--    <fragment android:id="@+id/Labels"-->
+<!--        android:name="com.example.fastleader.Fragment.LabelFragment"-->
+<!--        android:label="Label"-->
+<!--        tools:layout="@layout/fragment_label"/>-->
+
+
+
+    <fragment android:id="@+id/MyBusiness"
+        android:name="com.example.fastleader.Fragment.MyBusinessFragment"
+        android:label="My Business"
+        tools:layout="@layout/fragment_my_business"/>
+
+</navigation>

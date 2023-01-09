@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:backgroundTint="@color/blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.MainActivity2">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:subtitleTextColor="@color/blue"
+            app:titleTextColor="@color/blue"
+            app:title="Arjun AC Service"
+
+            tools:ignore="MissingConstraints" />
+        <fragment
+            android:id="@+id/frame_layout"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:navGraph="@navigation/mobile_navigation1" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            app:menu="@menu/bottom_nav_menu"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="labeled"
+            android:saveEnabled="true"
+
+            app:itemTextColor="@color/red"
+            android:textAlignment="center"
+            android:tooltipText="Home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view_student"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/navigation_drawer"
+        app:headerLayout="@layout/drawer_header"
+        android:clickable="true"
+
+
+
+
+        app:itemTextColor="@color/blue"
+
+        android:backgroundTint="@color/white"
+
+        app:itemIconTint="@color/blue"
+        android:keyboardNavigationCluster="true"
+
+
+        android:layout_gravity="start"
+        android:focusable="true" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
